@@ -1,0 +1,48 @@
+body {
+    background: black url("src/img/page-bg.png") repeat;
+    overflow: hidden;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);
+    background-color: black;
+    cursor: none;
+}
+
+#score, #score::selection {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    left: 50vw;
+    font-family: Consolas, Arial, sans-serif;
+    font-size: 28px;
+    opacity: 0.5;
+    transition: 1s;
+    animation: blinking 2s infinite;
+}
+
+#score:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    animation: rainbow 2s infinite;
+}
+
+@keyframes rainbow {
+    0% {color: red;}
+    20% {color: deeppink}
+    40% {color: blue}
+    60% {color: green}
+    80% {color: yellow;}
+    100% {color: red}
+}
+
+@keyframes blinking {
+    0% {color: #7a00bb;}
+    50% {color: #d993ff;}
+    100% {color: #7a00bb;}
+}
